@@ -1,0 +1,74 @@
+@verdi rc file Version 1.0
+[General]
+VerdiVersion = Verdi3_L-2016.06-1
+[KeyNote]
+Line1 = Automatic Backup 0
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+powerDumped = 0
+[hb]
+postSimFile = /home/ord1nary/study/Projects/sim/inter.fsdb
+syncTime = 490000
+viewport = 0 35 1920 1008 541 315 382 1918
+activeNode = "testbench"
+activeScope = "testbench"
+activeFile = "./testbench.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 2
+baMode = False
+srcLineNum = True
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "testbench"
+Scope2 = "testbench.i_bitonic.i_bitonic_sorter_16"
+Scope3 = "testbench.i_bitonic.i_bitonic_merge_16"
+Scope4 = "testbench.i_bitonic"
+rangeSelection = 3 3 1 5 1 1
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.sourceTab.1]
+scope = testbench
+File = /home/ord1nary/study/Projects/sim/testbench.sv
+Line = 3
+[imp.design1]
+dbEnum =  oh
+invokeDir = /home/ord1nary/study/Projects/sim
+design = DebussyLib
+hostCommand = hostCommand -elab ./simv.daidir/kdb.elab++
+topName = testbench 
+fromLibrary = TRUE
+[nMemoryManager]
+FsdbFile = /home/ord1nary/study/Projects/sim/inter.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 28 1920 850 191 65
+SessionFile = /home/ord1nary/study/Projects/sim/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSync = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE

@@ -1,0 +1,9 @@
+#!/bin/sh -h 
+PYTHONHOME=/media/ord1nary/Yes/SynopsysEDA/vcs2016/etc/search/pyh
+export PYTHONHOME
+PYTHONPATH=/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/pylib27
+export PYTHONPATH
+LD_LIBRARY_PATH=/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib:/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/pylib27
+export LD_LIBRARY_PATH
+/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/bin/vcsfind_create_index.exe  -z  "/home/ord1nary/study/Projects/sim/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" "/home/ord1nary/study/Projects/sim/simv.daidir/debug_dump/fsearch/./idents_nFRIYH.xml.gz" -o "/home/ord1nary/study/Projects/sim/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+\mv "/home/ord1nary/study/Projects/sim/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/ord1nary/study/Projects/sim/simv.daidir/debug_dump/fsearch/fsearch.db"

@@ -1,0 +1,71 @@
+{
+    "Modules": {
+        "bitonic_16": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "...MASTER...": {},
+        "std": {
+            "Compiled Times": 13,
+            "Compiled": "Yes"
+        },
+        "bitonic_sorter_16_0000": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "bitonic_merge_16_0000": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "cas": {
+            "Compiled Times": 13,
+            "Compiled": "Yes"
+        },
+        "testbench": {
+            "Compiled Times": 13,
+            "Compiled": "Yes"
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "M5nxJ_d": {
+            "icPath": "csrc"
+        },
+        "SpHpd_d": {
+            "icPath": "csrc"
+        },
+        "Fd0sr_d": {
+            "icPath": "csrc"
+        },
+        "h0Zue_d": {
+            "icPath": "csrc"
+        }
+    },
+    "CompUnits": {
+        "iAVhC_d": {
+            "mod": "testbench",
+            "out": "iAVhC_d.o",
+            "archive": "archive.12/_51055_archive_1.a",
+            "bytes": 32116,
+            "mode": 4,
+            "checksum": 0
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.12/_51055_archive_1.a",
+            "objects": [
+                [
+                    "iAVhC_d.o",
+                    32116
+                ]
+            ],
+            "size": 32116
+        }
+    ]
+}

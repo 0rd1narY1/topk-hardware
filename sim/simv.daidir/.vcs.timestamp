@@ -1,0 +1,161 @@
+0 
+49
++acc
++define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR
++incdir+.
++itf+/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/vcsdp_lite.tab
++v2k
++vcsd1
++vpi
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc-4.8
+-Mcfl= -pipe -fPIC -O -I/media/ord1nary/Yes/SynopsysEDA/vcs2016/include
+-Mcplusplus=g++-4.8
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -Wl,--no-as-needed -rdynamic
+-Mobjects= /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/libvirsim.so /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/liberrorinf.so /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/media/ord1nary/Yes/SynopsysEDA/verdi2016/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/media/ord1nary/Yes/SynopsysEDA/vcs2016/include
+-P
+-Xufe=2steps
+-Xvcs_run_simv=1
+-cm
+-cm_dir
+-cm_name
+-debug_access+all
+-fsdb
+-full64
+-gen_obj
+-kdb
+-lca
+-picarchive
+-sverilog
+-timescale=1ns/1ps
+../src/bitonic_16.sv
+../src/bitonic_merge_16.sv
+../src/bitonic_sorter_16.sv
+../src/cas.sv
+./covdir.vdb
+./testbench.sv
+/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/bin/vcs1
+/media/ord1nary/Yes/SynopsysEDA/verdi2016/share/PLI/VCS/LINUX64/verdi.tab
+line+cond+fsm+branch+tgl
+simv
+93
+sysc_uni_pwd=/home/ord1nary/study/Projects/sim
+_CE_M=
+_CE_CONDA=
+XMODIFIERS=@im=fcitx
+XDG_SESSION_TYPE=x11
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_CLASS=user
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/ord1nary/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+WINDOWPATH=2
+VTE_VERSION=6800
+VMR_MODE_FLAG=64
+VERDI_HOME=/media/ord1nary/Yes/SynopsysEDA/verdi2016
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LCAMSG_PRINT_OFF=1
+VCS_HOME=/media/ord1nary/Yes/SynopsysEDA/vcs2016
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+VANA_LICENSE_TO=sui bian xie
+VANA_LICENSE_MODE=true
+USERNAME=ord1nary
+UNAME=/bin/uname
+TURBO_LOG_DIR=/tmp/vcs_20241203132356_50380
+TOOL_HOME=/media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64
+SYSTEMD_EXEC_PID=2268
+SYNOPSYS=/media/ord1nary/Yes/SynopsysEDA/designcompiler2016
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SSH_AGENT_LAUNCHER=gnome-keyring
+SPIKE_PATH=/home/ord1nary/study/DigitalLogic_CPUDesign/sc_cpu/toolchains/riscv-isa-sim/bin
+SESSION_MANAGER=local/DellUbuntu:@/tmp/.ICE-unix/2268,unix/DellUbuntu:/tmp/.ICE-unix/2268
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_IM_MODULE=fcitx
+QT_ACCESSIBILITY=1
+PT_HOME=/media/ord1nary/Yes/SynopsysEDA/primetime2016
+PAPERSIZE=letter
+OVA_UUM=0
+NVM_INC=/home/ord1nary/.nvm/versions/node/v22.11.0/include/node
+NVM_DIR=/home/ord1nary/.nvm
+NVM_CD_FLAGS=
+NVM_BIN=/home/ord1nary/.nvm/versions/node/v22.11.0/bin
+NPC_HOME=/home/ord1nary/study/Chip/ysyx-workbench/npc
+NOVAS_HOME=/media/ord1nary/Yes/SynopsysEDA/verdi2016
+NEMU_HOME=/home/ord1nary/study/Chip/ysyx-workbench/nemu
+NDK_CCACHE=ccache
+MFLAGS=
+MAKE_TERMOUT=/dev/pts/1
+MAKE_TERMERR=/dev/pts/1
+MAKELEVEL=1
+MAKEFLAGS=
+LESSOPEN=| /usr/bin/lesspipe %s
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_TIME=en_US.UTF-8
+LC_TELEPHONE=en_US.UTF-8
+LC_PAPER=en_US.UTF-8
+LC_NUMERIC=en_US.UTF-8
+LC_NAME=en_US.UTF-8
+LC_MONETARY=en_US.UTF-8
+LC_MEASUREMENT=en_US.UTF-8
+LC_IDENTIFICATION=en_US.UTF-8
+LC_ALL=C
+LC_ADDRESS=en_US.UTF-8
+IM_CONFIG_PHASE=1
+GTK_MODULES=gail:atk-bridge
+GTK_IM_MODULE=fcitx
+GTK3_MODULES=xapp-gtk3-module
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+GNOME_TERMINAL_SERVICE=:1.119
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/3514d250_e833_4dc2_9dfd_130b95eefd54
+GNOME_SHELL_SESSION_MODE=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDMSESSION=ubuntu
+FM_HOME=/media/ord1nary/Yes/SynopsysEDA/formality2015
+DESKTOP_SESSION=ubuntu
+DC_HOME=/media/ord1nary/Yes/SynopsysEDA/designcompiler2016
+DBUS_STARTER_BUS_TYPE=session
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=a4c6da20edd5be97af8bf899674ead09
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=a4c6da20edd5be97af8bf899674ead09
+CUDA_HOME=:/usr/local/cuda-12.3
+CONDA_SHLVL=0
+CONDA_PYTHON_EXE=/home/ord1nary/anaconda3/bin/python
+CONDA_EXE=/home/ord1nary/anaconda3/bin/conda
+COLORTERM=truecolor
+CLUTTER_IM_MODULE=fcitx
+CCACHE_DIR=/home/ord1nary/.ccache
+AM_HOME=/home/ord1nary/study/Chip/ysyx-workbench/abstract-machine
+0
+8
+1733232235 ./testbench.sv
+1733210113 ../src/cas.sv
+1733227995 ../src/bitonic_sorter_16.sv
+1733231825 ../src/bitonic_merge_16.sv
+1733231356 ../src/bitonic_16.sv
+1464145457 /media/ord1nary/Yes/SynopsysEDA/vcs2016/include/cm_vcsd.tab
+1468145700 /media/ord1nary/Yes/SynopsysEDA/verdi2016/share/PLI/VCS/LINUX64/verdi.tab
+1464145466 /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/vcsdp_lite.tab
+4
+0 
+1464147802 /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/libvirsim.so
+1464147272 /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/liberrorinf.so
+1464147248 /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/lib/libsnpsmalloc.so
+1733232238 simv.daidir

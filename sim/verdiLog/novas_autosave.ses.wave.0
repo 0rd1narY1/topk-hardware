@@ -1,0 +1,167 @@
+Magic 271485
+Revision Verdi3_L-2016.06-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 28 1920 850 191 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ord1nary/study/Projects/sim/inter.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 565600.000000
+cursor 490000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 113
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/ord1nary/study/Projects/sim/inter.fsdb"
+addSignal -h 15 /testbench/i_bitonic/clk_i
+addSignal -h 15 /testbench/i_bitonic/rstn_i
+addSignal -h 15 /testbench/i_bitonic/sign_ctrl_i
+addSignal -expanded -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[15:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[15][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[14][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[13][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[12][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[11][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[10][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[9][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[8][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[7][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[6][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[5][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[4][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[3][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[2][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[1][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/x_i[0][7:0]
+addSignal -expanded -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[15:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[15][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[14][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[13][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[12][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[11][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[10][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[9][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[8][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[7][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[6][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[5][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[4][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[3][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[2][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[1][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/y_o[0][7:0]
+addGroup "G2"
+addSignal -h 15 /testbench/i_bitonic/i_bitonic_merge_16/clk_i
+addSignal -h 15 /testbench/i_bitonic/i_bitonic_merge_16/rstn_i
+addSignal -h 15 /testbench/i_bitonic/i_bitonic_merge_16/sign_ctrl_i
+addSignal -expanded -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[15:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[15][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[14][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[13][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[12][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[11][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[10][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[9][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[8][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[7][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[6][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[5][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[4][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[3][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[2][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[1][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/origin_i[0][7:0]
+addSignal -expanded -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[15:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[15][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[14][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[13][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[12][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[11][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[10][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[9][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[8][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[7][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[6][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[5][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[4][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[3][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[2][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[1][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_merge_16/convert_o[0][7:0]
+addGroup "G3"
+addSignal -h 15 /testbench/i_bitonic/i_bitonic_sorter_16/clk_i
+addSignal -h 15 /testbench/i_bitonic/i_bitonic_sorter_16/rstn_i
+addSignal -h 15 /testbench/i_bitonic/i_bitonic_sorter_16/sign_ctrl_i
+addSignal -expanded -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[15:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[15][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[14][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[13][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[12][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[11][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[10][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[9][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[8][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[7][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[6][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[5][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[4][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[3][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[2][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[1][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/x_i[0][7:0]
+addSignal -expanded -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[15:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[15][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[14][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[13][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[12][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[11][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[10][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[9][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[8][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[7][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[6][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[5][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[4][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[3][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[2][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[1][7:0]
+addSignal -h 15 -2COMP -UDEC /testbench/i_bitonic/i_bitonic_sorter_16/y_o[0][7:0]
+addGroup "G4"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
