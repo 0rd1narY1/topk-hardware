@@ -1,5 +1,0 @@
-@elabcom rc file Version 1.0
-[oh]
-invokeDir = /home/ord1nary/study/Projects/sim
-hostCommand = -lib simv.daidir/work -elab simv.daidir/kdb -simflow -top "testbench " -Lf work -SNPS_ELABCOM -saveElab
-simType = VCS

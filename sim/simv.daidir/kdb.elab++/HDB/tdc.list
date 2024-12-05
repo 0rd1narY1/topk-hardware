@@ -1,5 +1,0 @@
-../src/bitonic_sorter_16.sv
-../src/bitonic_16.sv
-../src/bitonic_merge_16.sv
-../src/cas.sv
-./testbench.sv
