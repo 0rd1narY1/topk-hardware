@@ -1,12 +1,12 @@
 // Basic 2-inputs Compare and Swap Unit
 
-module cas #(
+module cas import sorter_pkg::*; #(
     parameter int DATAWIDTH = 8
 )(
     input  logic                    clk_i,
     input  logic                    rstn_i,
-    input  logic                    sign_ctrl_i, //0: unsigned, 1: signed
-    output logic                    sign_ctrl_o,//0: unsigned, 1: signed
+    input  ctrl_t                   ctrl_i,//sign_ctrl-- 0: unsigned, 1: signed
+    output ctrl_t                   ctrl_o,//sign_ctrl-- 0: unsigned, 1: signed
     input  logic [DATAWIDTH-1:0]    x1_i,
     input  logic [DATAWIDTH-1:0]    x2_i,
     output logic [DATAWIDTH-1:0]    y1_o,
@@ -14,13 +14,13 @@ module cas #(
 );
 
     logic [DATAWIDTH-1:0] y1_d, y2_d;
-    logic sign_ctrl_d;
+    ctrl_t ctrl_d;
     
     always_comb begin : compare_swap
         y1_d = 0;
         y2_d = 0;
-        sign_ctrl_d = sign_ctrl_i;
-        case (sign_ctrl_i)
+        ctrl_d = ctrl_i;
+        case (ctrl_d.sign_ctrl)
             0: begin
                 if(x1_i <= x2_i) begin
                     y1_d = x1_i;
@@ -50,11 +50,11 @@ module cas #(
         if(!rstn_i) begin
             y1_o <= '0;
             y2_o <= '0;
-            sign_ctrl_o <= 0;
+            ctrl_o <= '{'0, '0};
         end else begin
             y1_o <= y1_d;
             y2_o <= y2_d;
-            sign_ctrl_o <= sign_ctrl_d;
+            ctrl_o <= ctrl_d;
         end
     end
 

@@ -1,5 +1,7 @@
-SRC = . ../src/bitonic_new/*.sv \
-	  ../src/*.sv \
+SRC = . ../src/sorter_pkg.sv \
+	  ../src/sorter_top.sv \
+	  ../src/cas.sv \
+	  ../src/bitonic_new/*.sv \
 	  ./testbench.sv 
 
 VCS_OUTPUT = csrc DVEfiles inter.vpd simv.daidir ucli.key simv
