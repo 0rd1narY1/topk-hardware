@@ -24,10 +24,10 @@ package sorter_pkg;
     
     // Data output interface 
     typedef struct{
-        logic [DATAWIDTH-1:0]data_4[3:0];
-        logic [DATAWIDTH-1:0]data_8[7:0];
-        logic [DATAWIDTH-1:0]data_16[15:0];
-        logic [DATAWIDTH-1:0]data_32[31:0];
+        logic [DATAWIDTH-1:0]data_4[NUM_4_SORTER-1:0][3:0];
+        logic [DATAWIDTH-1:0]data_8[NUM_8_SORTER-1:0][7:0];
+        logic [DATAWIDTH-1:0]data_16[NUM_16_SORTER-1:0][15:0];
+        logic [DATAWIDTH-1:0]data_32[NUM_32_SORTER-1:0][31:0];
     }data_o_t;
 
     //Sorter top module I/O, including data_valid channel.

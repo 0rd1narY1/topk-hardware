@@ -10,7 +10,8 @@ module sorter_top import sorter_pkg::*; #(
     input  logic                   clk_i,
     input  logic                   rstn_i,
     input  logic                   sign_ctrl_i,
-    input  logic [5:0]             in_data_length_i,
+    input  logic [5:0]             total_length_i,
+    input  logic [3:0]             total_group_i, //Parallel input group to be sorted
     input  logic [DATAWIDTH-1:0]   x_i[MAX_DATALENGTH-1:0],
     output sorter_top_io_t         y_o
 );
@@ -20,6 +21,8 @@ module sorter_top import sorter_pkg::*; #(
     /************************/ 
     
     logic [DATAWIDTH-1:0]data_extended[MAX_DATALENGTH-1:0];
+    //length_per_group --> extend --> length_per_group_extend
+    logic [5:0]length_per_group, length_per_group_extend; 
     logic [DATAWIDTH-1:0]fill_value_unsigned = {{DATAWIDTH{1'b1}}};
     logic [DATAWIDTH-1:0]fill_value_signed = $signed({1'b0,{(DATAWIDTH-1){1'b1}}});
     
@@ -52,27 +55,104 @@ module sorter_top import sorter_pkg::*; #(
     always_comb begin:sorter 
         //default value
         data_extended = '{MAX_DATALENGTH{0}};
+        length_per_group = total_length_i / total_group_i;
+        length_per_group_extend = 0;
         ctrl_in.sign_ctrl = sign_ctrl_i;
         ctrl_in.channel = 0;
 
-        //Data length extension
-        for(int i = 0; i < MAX_DATALENGTH; i++) begin
-            if(i < in_data_length_i)
+        //Data channel selection 
+        if(length_per_group >= 17) begin 
+            length_per_group_extend = 32;
+            ctrl_in.channel = 4;
+        end
+        else if(length_per_group >= 9 && length_per_group <= 16) begin 
+            length_per_group_extend = 16;
+            ctrl_in.channel = 3;
+        end 
+        else if(length_per_group >= 5 && length_per_group <= 8) begin 
+            length_per_group_extend = 8;
+            ctrl_in.channel = 2;
+        end 
+        else if(length_per_group > 0 && length_per_group <= 4) begin 
+            length_per_group_extend = 4;
+            ctrl_in.channel = 1;
+        end
+
+        //Data length extension 
+        case(length_per_group_extend)
+            4: begin
+                for(int group = 0; group < 8; group++) begin 
+                    if(group < total_group_i) begin 
+                        for(int i = 0; i < 4; i++) begin 
+                            if(i < length_per_group)
+                                data_extended[i+4*group] = x_i[i+4*group]; //original value
+                            else begin
+                                data_extended[i+4*group] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+                            end
+                        end
+                    end
+                end
+                for(int i = 4*total_group_i; i < MAX_DATALENGTH; i++)
+                    data_extended[i] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+            end
+            8: begin
+                for(int group = 0; group < 4; group++) begin 
+                    if(group < total_group_i) begin 
+                        for(int i = 0; i < 8; i++) begin 
+                            if(i < length_per_group)
+                                data_extended[i+8*group] = x_i[i+8*group]; //original value
+                            else begin
+                                data_extended[i+8*group] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+                            end
+                        end
+                    end
+                end
+                for(int i = 8*total_group_i; i < MAX_DATALENGTH; i++)
+                    data_extended[i] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+            end
+            16: begin
+                for(int group = 0; group < 2; group++) begin 
+                    if(group < total_group_i) begin 
+                        for(int i = 0; i < 16; i++) begin 
+                            if(i < length_per_group)
+                                data_extended[i+16*group] = x_i[i+16*group]; //original value
+                            else begin
+                                data_extended[i+16*group] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+                            end
+                        end
+                    end
+                end
+                for(int i = 16*total_group_i; i < MAX_DATALENGTH; i++)
+                    data_extended[i] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+            end
+            32: begin
+                for(int i = 0; i < 32; i++) begin 
+                    if(i < length_per_group)
+                        data_extended[i] = x_i[i]; //original value
+                    else begin
+                        data_extended[i] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+                    end
+                end
+            end
+            default: begin
+                for(int i = 0; i < MAX_DATALENGTH; i++) begin
+                    if(i < total_length_i)
+                        data_extended[i] = x_i[i]; //original value
+                    else begin
+                        data_extended[i] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
+                    end
+                end
+            end
+        endcase
+        
+        /*for(int i = 0; i < MAX_DATALENGTH; i++) begin
+            if(i < total_length_i)
                 data_extended[i] = x_i[i]; //original value
             else begin
                 data_extended[i] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
             end
-        end
+        end*/
 
-        //Data channel selection 
-        if(in_data_length_i >= 17) 
-            ctrl_in.channel = 4;
-        else if(in_data_length_i >= 9 && in_data_length_i <= 16)
-            ctrl_in.channel = 3;
-        else if(in_data_length_i >= 5 && in_data_length_i <= 8)
-            ctrl_in.channel = 2;
-        else if(in_data_length_i > 0 && in_data_length_i <= 4)
-            ctrl_in.channel = 1;
     end:sorter
 
 endmodule

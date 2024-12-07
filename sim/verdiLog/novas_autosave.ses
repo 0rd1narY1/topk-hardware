@@ -1,0 +1,72 @@
+@verdi rc file Version 1.0
+[General]
+VerdiVersion = Verdi3_L-2016.06-1
+[KeyNote]
+Line1 = Automatic Backup 0
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+powerDumped = 0
+[hb]
+postSimFile = /home/ord1nary/study/Projects/sim/test.fsdb
+syncTime = 310000
+viewport = 0 35 1920 1008 633 601 189 1918
+activeNode = "testbench.i_sorter_top"
+activeScope = "testbench.i_sorter_top"
+activeFile = "../src/sorter_top.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 14
+baMode = False
+srcLineNum = True
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "testbench.i_sorter_top"
+Scope2 = "testbench"
+multipleSelection = 6 9 5 0 0 10 5 0 0 12 11 0 0 13 11 0 0 43 2 0 0 44 2 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.sourceTab.1]
+scope = testbench.i_sorter_top
+File = /home/ord1nary/study/Projects/src/sorter_top.sv
+Line = 15
+[imp.design1]
+dbEnum =  oh
+invokeDir = /home/ord1nary/study/Projects/sim
+design = DebussyLib
+hostCommand = hostCommand -elab /home/ord1nary/study/Projects/sim/simv.daidir/kdb.elab++
+topName = testbench 
+fromLibrary = TRUE
+[nMemoryManager]
+FsdbFile = /home/ord1nary/study/Projects/sim/test.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 28 1920 904 265 65
+SessionFile = /home/ord1nary/study/Projects/sim/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSync = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE

@@ -32,12 +32,17 @@ module bitonic_32 import sorter_pkg::*; #(
             .x_i            (x_i[16*i+:16]),
             .y_o            (fe_out[i])
         );
+
+        //Gather sub-modules'data to the father module's output port.
+        assign y_o.data_4[4*i+:4] = fe_out[i].data_4[3:0]; //Only the first 4 channels of data_4 have data.
+        assign y_o.data_8[2*i+:2] = fe_out[i].data_8[1:0]; //Only the first 2 channels of data_8 has data.
+        assign y_o.data_16[i] = fe_out[i].data_16[0]; //Only the first channel of data_16 has data.
     end
 
-    assign fe_32_out = {fe_out[1].data_16, fe_out[0].data_16};
-    assign y_o.data_4 = fe_out[0].data_4;
-    assign y_o.data_8 = fe_out[0].data_8;
-    assign y_o.data_16 = fe_out[0].data_16;
+    assign fe_32_out = {fe_out[1].data_16[0], fe_out[0].data_16[0]};
+    //assign y_o.data_4 = fe_out[0].data_4;
+    //assign y_o.data_8 = fe_out[0].data_8;
+    //assign y_o.data_16 = fe_out[0].data_16;
 
     /********************/
     /*     Backend      */
@@ -52,7 +57,7 @@ module bitonic_32 import sorter_pkg::*; #(
         .ctrl_i         (ctrl_fe_out[0]),
         .ctrl_o         (ctrl_o),
         .x_i            (fe_32_out),
-        .y_o            (y_o.data_32)
+        .y_o            (y_o.data_32[0])
     );
 
 endmodule

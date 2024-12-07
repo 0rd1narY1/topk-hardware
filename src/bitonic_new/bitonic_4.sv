@@ -9,7 +9,8 @@ module bitonic_4 import sorter_pkg::*; #(
     input  ctrl_t                   ctrl_i,
     output ctrl_t                   ctrl_o,
     input  logic [DATAWIDTH-1:0]    x_i[DATALENGTH-1:0],
-    output data_o_t                y_o
+    //output logic [DATAWIDTH-1:0]    y_o[DATALENGTH-1:0]
+    output data_o_t                 y_o
 );
     
     /********************/
@@ -80,8 +81,8 @@ module bitonic_4 import sorter_pkg::*; #(
             .ctrl_o         (ctrl_be_stage_2_out[i]),
             .x1_i           (stage_1_out[2*i]),
             .x2_i           (stage_1_out[2*i+1]),
-            .y1_o           (y_o.data_4[2*i]),
-            .y2_o           (y_o.data_4[2*i+1])
+            .y1_o           (y_o.data_4[0][2*i]),
+            .y2_o           (y_o.data_4[0][2*i+1])
         );
     end
 

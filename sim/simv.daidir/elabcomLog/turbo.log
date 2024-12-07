@@ -1,0 +1,3 @@
+Command Line: /media/ord1nary/Yes/SynopsysEDA/vcs2016/linux64/bin/elabcom -logdir simv.daidir/elabcomLog -simvdaidir simv.daidir -lib simv.daidir/work -elab simv.daidir/kdb -simflow -top testbench  -ssz -ssv -ssy -ssz -ssv -ssy -Lf work
+uname(Linux DellUbuntu 6.8.0-49-generic #49~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Nov  6 17:42:15 UTC 2 x86_64)
+au time 0.025138 0.013171 0.012121 delta 228573184 228573184 total 286834688 286834688

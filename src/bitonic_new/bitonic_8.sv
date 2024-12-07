@@ -16,7 +16,7 @@ module bitonic_8 import sorter_pkg::*; #(
     /*     Frontend     */
     /********************/ 
     data_o_t fe_out[1:0]; //Two 4-input sorters respectively
-    logic [DATAWIDTH-1:0] fe_8_out[DATALENGTH-1:0];
+    logic [DATAWIDTH-1:0]fe_8_out[DATALENGTH-1:0];
     ctrl_t ctrl_fe_out[1:0];
     
     for(genvar i = 0; i < 2; i++) begin
@@ -31,10 +31,12 @@ module bitonic_8 import sorter_pkg::*; #(
             .x_i            (x_i[4*i+:4]),
             .y_o            (fe_out[i])
         );
+        
+        //Gather sub-modules'data to the father module's output port.
+        assign y_o.data_4[i] = fe_out[i].data_4[0];
     end
 
-    assign fe_8_out = {fe_out[1].data_4, fe_out[0].data_4};
-    assign y_o.data_4 = fe_out[0].data_4;
+    assign fe_8_out = {fe_out[1].data_4[0], fe_out[0].data_4[0]};
 
     /********************/
     /*     Backend      */
@@ -49,7 +51,7 @@ module bitonic_8 import sorter_pkg::*; #(
         .ctrl_i         (ctrl_fe_out[0]),
         .ctrl_o         (ctrl_o),
         .x_i            (fe_8_out),
-        .y_o            (y_o.data_8)
+        .y_o            (y_o.data_8[0])
     );
 
 endmodule

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
+  <srcinfo name="/home/ord1nary/study/Projects/sim"  >
+    <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="L-2016.06"  />
+      <fileinfo name="../src/sorter_pkg.sv"  id="0"  />
+      <fileinfo name="../src/sorter_top.sv"  id="1"  />
+      <fileinfo name="../src/cas.sv"  id="2"  />
+      <fileinfo name="../src/bitonic_new/bitonic_16_backend.sv"  id="3"  />
+      <fileinfo name="../src/bitonic_new/bitonic_16.sv"  id="4"  />
+      <fileinfo name="../src/bitonic_new/bitonic_32_backend.sv"  id="5"  />
+      <fileinfo name="../src/bitonic_new/bitonic_32.sv"  id="6"  />
+      <fileinfo name="../src/bitonic_new/bitonic_4.sv"  id="7"  />
+      <fileinfo name="../src/bitonic_new/bitonic_8_backend.sv"  id="8"  />
+      <fileinfo name="../src/bitonic_new/bitonic_8.sv"  id="9"  />
+      <fileinfo name="./testbench.sv"  id="10"  />
+    </srcinfo>

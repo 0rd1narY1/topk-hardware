@@ -1,0 +1,11 @@
+../src/sorter_pkg.sv
+../src/sorter_top.sv
+../src/bitonic_new/bitonic_8.sv
+../src/bitonic_new/bitonic_32_backend.sv
+../src/bitonic_new/bitonic_4.sv
+../src/bitonic_new/bitonic_8_backend.sv
+../src/bitonic_new/bitonic_16_backend.sv
+../src/bitonic_new/bitonic_32.sv
+../src/bitonic_new/bitonic_16.sv
+../src/cas.sv
+./testbench.sv

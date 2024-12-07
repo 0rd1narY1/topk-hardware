@@ -1,0 +1,11 @@
+/home/ord1nary/study/Projects/sim/testbench.sv
+/home/ord1nary/study/Projects/src/bitonic_new/bitonic_16.sv
+/home/ord1nary/study/Projects/src/bitonic_new/bitonic_16_backend.sv
+/home/ord1nary/study/Projects/src/bitonic_new/bitonic_32.sv
+/home/ord1nary/study/Projects/src/bitonic_new/bitonic_32_backend.sv
+/home/ord1nary/study/Projects/src/bitonic_new/bitonic_4.sv
+/home/ord1nary/study/Projects/src/bitonic_new/bitonic_8.sv
+/home/ord1nary/study/Projects/src/bitonic_new/bitonic_8_backend.sv
+/home/ord1nary/study/Projects/src/cas.sv
+/home/ord1nary/study/Projects/src/sorter_pkg.sv
+/home/ord1nary/study/Projects/src/sorter_top.sv
