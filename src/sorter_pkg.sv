@@ -12,14 +12,20 @@ package sorter_pkg;
     localparam int unsigned NUM_16_SORTER = MAX_DATALENGTH / 16;
     localparam int unsigned NUM_32_SORTER = MAX_DATALENGTH / 32;
 
-    // Data input interface 
+    // Channel selection signal
+    typedef struct{
+        //Each channel has its own selection signal
+        logic [7:0]channel_4;
+        logic [3:0]channel_8;
+        logic [1:0]channel_16;
+        logic      channel_32;
+    }channel_t;
+
+    // Control signal interface 
     typedef struct{
         //Is signed/unsigned?
         logic sign_ctrl;
-        //Indicate which channel is valid data channel. 
-        //0: all the channels are invalid; 1: data_4; 2: data_8;
-        //3: data_16; 4: data_32.
-        logic [2:0]channel;
+        channel_t channel;
     }ctrl_t;
     
     // Data output interface 
@@ -33,10 +39,15 @@ package sorter_pkg;
     //Sorter top module I/O, including data_valid channel.
     typedef struct{
         data_o_t data;
+        //BUG: Different channels may be valid at the same time.
+        //So we should use sperate signal to iffer valid channels.
+        //It's possible that we shouldn't seperate the channel selection 
+        //signal with the data channels.
+        //
         //Indicate which channel is valid data channel. 
         //0: all the channels are invalid; 1: data_4; 2: data_8;
         //3: data_16; 4: data_32.
-        logic [2:0]channel;  
+        channel_t channel;  
     }sorter_top_io_t;
 
 endpackage

@@ -16,7 +16,7 @@ module cas import sorter_pkg::*; #(
     logic [DATAWIDTH-1:0] y1_d, y2_d;
     ctrl_t ctrl_d;
     
-    always_comb begin : compare_swap
+    always_comb begin:compare_swap
         y1_d = 0;
         y2_d = 0;
         ctrl_d = ctrl_i;
@@ -48,9 +48,9 @@ module cas import sorter_pkg::*; #(
 
     always_ff @(posedge clk_i, negedge rstn_i) begin 
         if(!rstn_i) begin
-            y1_o <= '0;
-            y2_o <= '0;
-            ctrl_o <= '{'0, '0};
+            y1_o <= 'h0;
+            y2_o <= 'h0;
+            ctrl_o <= '{'h0, '{'h0, 'h0, 'h0, 'h0}};
         end else begin
             y1_o <= y1_d;
             y2_o <= y2_d;

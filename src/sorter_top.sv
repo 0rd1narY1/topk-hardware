@@ -58,24 +58,41 @@ module sorter_top import sorter_pkg::*; #(
         length_per_group = total_length_i / total_group_i;
         length_per_group_extend = 0;
         ctrl_in.sign_ctrl = sign_ctrl_i;
-        ctrl_in.channel = 0;
+        ctrl_in.channel = '{'h0, 'h0, 'h0, 'h0};
 
         //Data channel selection 
         if(length_per_group >= 17) begin 
             length_per_group_extend = 32;
-            ctrl_in.channel = 4;
+            ctrl_in.channel.channel_32 = 1;
         end
         else if(length_per_group >= 9 && length_per_group <= 16) begin 
             length_per_group_extend = 16;
-            ctrl_in.channel = 3;
+            //1 group if 16 inputs or 2 groups of 16 inputs?
+            ctrl_in.channel.channel_16 = (total_group_i == 2)? 2'b11 : 2'b01;
         end 
         else if(length_per_group >= 5 && length_per_group <= 8) begin 
             length_per_group_extend = 8;
-            ctrl_in.channel = 2;
+            case(total_group_i)
+                1:       ctrl_in.channel.channel_8 = 4'b0001;
+                2:       ctrl_in.channel.channel_8 = 4'b0011;
+                3:       ctrl_in.channel.channel_8 = 4'b0111;
+                4:       ctrl_in.channel.channel_8 = 4'b1111;
+                default: ctrl_in.channel.channel_8 = 4'b0;
+            endcase
         end 
         else if(length_per_group > 0 && length_per_group <= 4) begin 
             length_per_group_extend = 4;
-            ctrl_in.channel = 1;
+            case(total_group_i)
+                1:       ctrl_in.channel.channel_4 = 8'b00000001;
+                2:       ctrl_in.channel.channel_4 = 8'b00000011;
+                3:       ctrl_in.channel.channel_4 = 8'b00000111;
+                4:       ctrl_in.channel.channel_4 = 8'b00001111;
+                5:       ctrl_in.channel.channel_4 = 8'b00011111;
+                6:       ctrl_in.channel.channel_4 = 8'b00111111;
+                7:       ctrl_in.channel.channel_4 = 8'b01111111;
+                8:       ctrl_in.channel.channel_4 = 8'b11111111;
+                default: ctrl_in.channel.channel_4 = 8'b0;
+            endcase
         end
 
         //Data length extension 
@@ -145,14 +162,6 @@ module sorter_top import sorter_pkg::*; #(
             end
         endcase
         
-        /*for(int i = 0; i < MAX_DATALENGTH; i++) begin
-            if(i < total_length_i)
-                data_extended[i] = x_i[i]; //original value
-            else begin
-                data_extended[i] = sign_ctrl_i?fill_value_signed:fill_value_unsigned; //extend value
-            end
-        end*/
-
     end:sorter
 
 endmodule
