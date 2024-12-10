@@ -29,46 +29,147 @@ end
 
 initial begin
     clk = 0; rstn = 0; sign_ctrl = 0; x = '{32{'0}}; total_length = 0; total_group = 0;
-    //是否带符号、单组长度改变测试
-    #30 rstn = 1; total_length = 32; total_group = 1;
-    x = {5,7,9,1,0,2,3,6,8,15,14,12,13,10,11,4,7,5,9,6,4,2,0,3,5,6,12,5,8,5,7,15};
-    @(posedge clk) sign_ctrl = 1; total_group = 1;
-    x = {-100,-95,-90,-60,-40,-20,-18,-14,-8,-5,-1,0,5,10,25,35,-100,-5,-6,-9,-8,-7,-52,-75,10,23,56,0,-5,-6,1,25};
-    @(posedge clk) sign_ctrl = 1; total_length = 19; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,10,25,35,-10,-5,-6,-9,-8,-7,-52,-75,10,23,56,0,-5,-6,1,25};
-    @(posedge clk) sign_ctrl = 0; total_length = 18; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2,3,6,8,15,14,12,13,10,11,4,7,5};
+    #30 rstn = 1; 
+    x = {5,7,12,25,16,31,18,24,2,3,1,7,13,10,11,4,7,5,9,6,4,2,0,3,5,6,12,5,8,5,7,15};
+    
+    //1组20输入
     @(posedge clk) total_length = 20; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2,3,6,8,15,14,12,13,10,11,4,7,5,4,17};
+    //1组19输入
+    @(posedge clk) total_length = 19; total_group = 1;
+    //1组18输入
+    @(posedge clk) total_length = 18; total_group = 1;
+    //1组17输入
+    @(posedge clk) total_length = 17; total_group = 1;
+    //1组16输入
     @(posedge clk) total_length = 16; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2,3,6,8,15,14,12,13,10,11,4};
+    //1组15输入
+    @(posedge clk) total_length = 15; total_group = 1;
+    //1组14输入
     @(posedge clk) total_length = 14; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2,3,6,8,15,14,12,13,10};
+    //1组13输入
+    @(posedge clk) total_length = 13; total_group = 1;
+    //1组12输入
+    @(posedge clk) total_length = 12; total_group = 1;
+    //1组11输入
     @(posedge clk) total_length = 11; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2,3,6,8,15,14};
+    //1组10输入
+    @(posedge clk) total_length = 10; total_group = 1;
+    //1组9输入
+    @(posedge clk) total_length = 9; total_group = 1;
+    //1组8输入
     @(posedge clk) total_length = 8; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2,3,6};
-    @(posedge clk) total_length = 8; total_group = 1;
-    x = {5,7,9,1,0,2,3,6,8,15,14,12,13,10,11,4,7,5,9,6,4,2,0,3,5,6,12,5,8,5,7,15};
+    //1组7输入
+    @(posedge clk) total_length = 7; total_group = 1;
+    //1组6输入
     @(posedge clk) total_length = 6; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2};
+    //1组5输入
+    @(posedge clk) total_length = 5; total_group = 1;
+    //1组4输入
     @(posedge clk) total_length = 4; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9,1,0,2};
+    //1组3输入
     @(posedge clk) total_length = 3; total_group = 1;
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,9};
-    @(posedge clk) x = '{32{'0}};
-    //并行化: 并行执行4组8元素排序 
-    @(posedge clk) total_length = 32; total_group = 4;
-    x1 = {7,4,6,5,2,3,8,1}; x2 = {9,10,8,6,2,3,7,12}; x3 = {12,15,4,1,3,8,7,14}; x4 = {1,4,7,5,6,2,8,3};
-    x = {x4, x3, x2, x1};
-    //并行化: 并行执行2组8元素排序 
-    @(posedge clk) total_length = 16; total_group = 2;
-    x1 = {9,10,8,6,2,3,7,12}; x2 = {1,4,7,5,6,2,8,3};
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, x2, x1};
-    //并行化: 并行执行2组6元素排序 
-    @(posedge clk) total_length = 12; total_group = 2;
-    x1 = {0,0,8,6,2,3,7,12}; x2 = {0,0,7,5,6,2,8,3};
-    x = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, x2, x1};
+    //1组2输入
+    @(posedge clk) total_length = 2; total_group = 1;
+    //1组1输入
+    @(posedge clk) total_length = 1; total_group = 1;
+    //1组0输入
+    @(posedge clk) total_length = 0; total_group = 1;
+    
+    /*********多输入并行化测试***********/
+    
+    //2组16输入 
+    @(posedge clk) total_length = 16*2; total_group = 2;
+    //2组15输入 
+    @(posedge clk) total_length = 15*2; total_group = 2;
+    //2组14输入 
+    @(posedge clk) total_length = 14*2; total_group = 2;
+    //2组13输入 
+    @(posedge clk) total_length = 13*2; total_group = 2;
+    //2组12输入 
+    @(posedge clk) total_length = 12*2; total_group = 2;
+    //2组11输入 
+    @(posedge clk) total_length = 11*2; total_group = 2;
+    //2组10输入 
+    @(posedge clk) total_length = 10*2; total_group = 2;
+    //2组9输入 
+    @(posedge clk) total_length = 9*2; total_group = 2;
+    
+    //2组8输入 
+    @(posedge clk) total_length = 8*2; total_group = 2;
+    //2组7输入 
+    @(posedge clk) total_length = 7*2; total_group = 2;
+    //2组6输入 
+    @(posedge clk) total_length = 6*2; total_group = 2;
+    //2组5输入 
+    @(posedge clk) total_length = 5*2; total_group = 2;
+    
+    //2组4输入 
+    @(posedge clk) total_length = 4*2; total_group = 2;
+    //2组3输入 
+    @(posedge clk) total_length = 3*2; total_group = 2;
+    //2组2输入 
+    @(posedge clk) total_length = 2*2; total_group = 2;
+
+    //3组8输入 
+    @(posedge clk) total_length = 8*3; total_group = 3;
+    //3组7输入 
+    @(posedge clk) total_length = 7*3; total_group = 3;
+    //3组6输入 
+    @(posedge clk) total_length = 6*3; total_group = 3;
+    //3组5输入 
+    @(posedge clk) total_length = 5*3; total_group = 3;
+    
+    //3组4输入 
+    @(posedge clk) total_length = 4*3; total_group = 3;
+    //3组3输入 
+    @(posedge clk) total_length = 3*3; total_group = 3;
+    //3组2输入 
+    @(posedge clk) total_length = 2*3; total_group = 3;
+    
+    //4组8输入 
+    @(posedge clk) total_length = 8*4; total_group = 4;
+    //4组7输入 
+    @(posedge clk) total_length = 7*4; total_group = 4;
+    //4组6输入 
+    @(posedge clk) total_length = 6*4; total_group = 4;
+    //4组5输入 
+    @(posedge clk) total_length = 5*4; total_group = 4;
+    //4组4输入 
+    @(posedge clk) total_length = 4*4; total_group = 4;
+    //4组3输入 
+    @(posedge clk) total_length = 3*4; total_group = 4;
+    //4组2输入 
+    @(posedge clk) total_length = 2*4; total_group = 4;
+    
+    
+    //5组4输入 
+    @(posedge clk) total_length = 4*5; total_group = 5;
+    //5组3输入 
+    @(posedge clk) total_length = 3*5; total_group = 5;
+    //5组2输入 
+    @(posedge clk) total_length = 2*5; total_group = 5;
+    
+    //6组4输入 
+    @(posedge clk) total_length = 4*6; total_group = 6;
+    //6组3输入 
+    @(posedge clk) total_length = 3*6; total_group = 6;
+    //6组2输入 
+    @(posedge clk) total_length = 2*6; total_group = 6;
+    
+    //7组4输入 
+    @(posedge clk) total_length = 4*7; total_group = 7;
+    //7组3输入 
+    @(posedge clk) total_length = 3*7; total_group = 7;
+    //7组2输入 
+    @(posedge clk) total_length = 2*7; total_group = 7;
+    
+    //8组4输入 
+    @(posedge clk) total_length = 4*8; total_group = 8;
+    //8组3输入 
+    @(posedge clk) total_length = 3*8; total_group = 8;
+    //8组2输入 
+    @(posedge clk) total_length = 2*8; total_group = 8;
+    
     @(posedge clk) total_length = 32; x = '{32{'0}};
     repeat (20) begin 
         @(posedge clk);
