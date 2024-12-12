@@ -1,6 +1,6 @@
 // 8-input bitonic sorter, composed of 2 4-input sorters and an 8-input backend.
 
-module bitonic_8 import sorter_pkg::*; #(
+module bitonic_8 import topk_pkg::*; #(
     parameter DATAWIDTH  = 8,
     parameter DATALENGTH = 8
 )(

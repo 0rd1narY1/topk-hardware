@@ -1,9 +1,10 @@
-// Sorter's top module, enabling input/output in different data length. 
-// A 32-input bitonic sorter which includes 16 4-input, 4 8-input and 2 16-input bitonic sorters is instantiated. Input can have any length <= 20.
-// Input data length will be extended to power-of-2 such as 4,8,16,32, and then input the extended list to 
+// Sorter's top module, enabling input/output in different data length and groups. 
+// A 32-input bitonic sorter which includes 8 4-input, 4 8-input and 2 16-input bitonic sorters is instantiated. 
+// Input can have any length <= 20.
+// Input data length will be extended to power-of-2 such as 4,8,16,32, and then input the extended lists to 
 // the bitonic sorters, and get a sorted output in different cycles according to its length.
 
-module sorter_top import sorter_pkg::*; #(
+module sorter_top import topk_pkg::*; #(
     parameter DATAWIDTH      = 8,
     parameter MAX_DATALENGTH = 32
 ) (

@@ -1,6 +1,6 @@
 // Basic 2-inputs Compare and Swap Unit
 
-module cas import sorter_pkg::*; #(
+module cas import topk_pkg::*; #(
     parameter int DATAWIDTH = 8
 )(
     input  logic                    clk_i,

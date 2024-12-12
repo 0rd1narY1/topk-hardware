@@ -1,4 +1,4 @@
-SRC = . ../src/sorter_pkg.sv \
+SRC = . ../src/topk_pkg.sv \
 	  ../src/sorter_top.sv \
 	  ../src/cas.sv \
 	  ../src/bitonic_new/*.sv \

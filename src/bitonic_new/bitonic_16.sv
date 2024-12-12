@@ -1,6 +1,6 @@
 // 16-input bitonic sorter, composed of 2 8-input sorters and an 16-input backend.
 
-module bitonic_16 import sorter_pkg::*; #(
+module bitonic_16 import topk_pkg::*; #(
     parameter DATAWIDTH  = 8,
     parameter DATALENGTH = 16
 )(

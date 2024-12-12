@@ -1,6 +1,6 @@
 // 32-input bitonic sorter's backend which is also 32-input.
 
-module bitonic_32_be import sorter_pkg::*; #(
+module bitonic_32_be import topk_pkg::*; #(
     parameter DATAWIDTH  = 8,
     parameter DATALENGTH = 32
 )(

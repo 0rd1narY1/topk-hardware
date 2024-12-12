@@ -1,0 +1,182 @@
+Magic 271485
+Revision Verdi3_L-2016.06-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 28 1920 900 273 114
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ord1nary/study/Projects/sim/test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 7
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1ns
+
+; waveform viewport range
+zoom 0.000000 637.584463 1n
+cursor 1250.000000
+marker 330.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+userMarker 1030 18 ID_WHITE line_solid
+userMarker 970 17 ID_WHITE line_solid
+userMarker 890 16 ID_PURPLE8 line_solid
+userMarker 830 15 ID_PURPLE8 line_solid
+userMarker 750 14 ID_PURPLE5 line_solid
+userMarker 690 13 ID_PURPLE5 line_solid
+userMarker 730 12 ID_YELLOW5 line_solid
+userMarker 610 11 ID_YELLOW5 line_solid
+userMarker 650 10 ID_GREEN5 line_solid
+userMarker 450 9 ID_GREEN5 line_solid
+userMarker 410 8 ID_ORANGE5 line_solid
+userMarker 350 7 ID_ORANGE5 line_solid
+userMarker 390 6 ID_RED5 line_solid
+userMarker 270 5 ID_RED5 line_solid
+userMarker 330 4 ID_GREEN5 line_solid
+userMarker 310 3 ID_CYAN5 line_solid
+userMarker 110 2 ID_CYAN5 line_solid
+userMarker 30 1 ID_GREEN5 line_solid
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 107
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByRising
+
+
+addGroup "G1"
+activeDirFile "" "/home/ord1nary/study/Projects/sim/test.fsdb"
+addSignal -h 20 /testbench/i_sorter_top/clk_i
+addSignal -h 20 -holdScope rstn_i
+addSignal -h 20 -UNSIGNED -UDEC -holdScope total_length_i[5:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope total_group_i[3:0]
+addSignal -expanded -h 15 -holdScope y_o
+addSignal -expanded -h 15 -holdScope y_o.data
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_4[7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[7][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[7][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[7][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[7][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[7][0][7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[6][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[6][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[6][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[6][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[6][0][7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[5][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[5][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[5][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[5][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[5][0][7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[4][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[4][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[4][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[4][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[4][0][7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[3][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[3][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[3][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[3][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[3][0][7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[2][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[2][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[2][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[2][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[2][0][7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[1][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[1][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[1][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[1][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[1][0][7:0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[0][3:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[0][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[0][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[0][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_4[0][0][7:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_8[3:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][7][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][6][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][5][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][4][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[3][0][7:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][7][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][6][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][5][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][4][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[2][0][7:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][7][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][6][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][5][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][4][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[1][0][7:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][7][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][6][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][5][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][4][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][3][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][2][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][1][7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope y_o.data.data_8[0][0][7:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_16[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_16[1][15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_16[0][15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope y_o.data.data_32[0:0]
+addSignal -expanded -h 15 -holdScope y_o.channel
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.channel.channel_4[7:0]
+addSignal -h 20 -holdScope y_o.channel.channel_4[7]
+addSignal -h 20 -holdScope y_o.channel.channel_4[6]
+addSignal -h 20 -holdScope y_o.channel.channel_4[5]
+addSignal -h 20 -holdScope y_o.channel.channel_4[4]
+addSignal -h 20 -holdScope y_o.channel.channel_4[3]
+addSignal -h 20 -holdScope y_o.channel.channel_4[2]
+addSignal -h 20 -holdScope y_o.channel.channel_4[1]
+addSignal -h 20 -holdScope y_o.channel.channel_4[0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.channel.channel_8[3:0]
+addSignal -h 20 -holdScope y_o.channel.channel_8[3]
+addSignal -h 20 -holdScope y_o.channel.channel_8[2]
+addSignal -h 20 -holdScope y_o.channel.channel_8[1]
+addSignal -h 20 -holdScope y_o.channel.channel_8[0]
+addSignal -expanded -h 20 -UNSIGNED -HEX -holdScope y_o.channel.channel_16[1:0]
+addSignal -h 20 -holdScope y_o.channel.channel_16[1]
+addSignal -h 20 -holdScope y_o.channel.channel_16[0]
+addSignal -h 20 -holdScope y_o.channel.channel_32
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

@@ -1,6 +1,6 @@
 // 4-input bitonic sorter, which can be the frontend of an 8-input bitonic sorter.
 
-module bitonic_4 import sorter_pkg::*; #(
+module bitonic_4 import topk_pkg::*; #(
     parameter DATAWIDTH  = 8,
     parameter DATALENGTH = 4
 )(
